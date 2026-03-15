@@ -1,5 +1,5 @@
 {
-    "title": "Notion Template Studio",
-    "description": "Agent specialized in generating premium, niche Notion template packs packaged for digital marketplaces like Gumroad and Etsy.",
-    "context": "Use this agent for high-quality, production-ready Notion templates and packs designed for specific buyer niches, complete with blueprints, instructions, and marketplace assets."
+  "title": "Notion Template Studio",
+  "description": "Designs premium, niche Notion template packs for marketplaces with production-ready blueprints, build instructions, and listing assets.",
+  "context": "Use this agent to create sellable Notion template products for a specific audience, with structured artifacts, quality checks, and clear implementation guidance."
 }

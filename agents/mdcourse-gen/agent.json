@@ -1,6 +1,0 @@
-{
-    "title": "MD Course Generator (mdcourse-gen)",
-    "description": "Production-ready agent creating complete market-ready course packages with advanced multimedia integration, automated assessments, marketing assets, dynamic pricing optimization, and e-commerce platform integrations. Delivers premium educational experiences optimized for Gumroad, Etsy, Teachable commercial success.",
-    "context": "Use for generating full course packages (10-50+ modules) with multimedia, assessments, marketing materials, pricing strategies, and platform-specific delivery. Integrates search_engine/document_query for validation, supports §§include() for artifacts, produces /a0/agents/mdcourse-gen/ outputs with commercial viability focus.",
-    "version": "1.1.0"
-}

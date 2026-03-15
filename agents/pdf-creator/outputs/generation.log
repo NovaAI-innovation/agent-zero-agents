@@ -174,3 +174,7 @@ mktextfm: `mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Hel
 [WARNING] Missing character: There is no ’ (U+2019) ("2019) in font ecrm1000!
 [WARNING] Missing character: There is no “ (U+201C) ("201C) in font ecrm1000!
 [WARNING] Missing character: There is no ” (U+201D) ("201D) in font ecrm1000!
+[2026-03-15 04:06:55] ERROR: pandoc is not installed or not in PATH.
+[2026-03-15 04:07:43] ERROR: pandoc is not installed or not in PATH.
+[2026-03-15 04:11:23] ERROR: pandoc is not installed or not in PATH.
+[2026-03-15 04:13:21] ERROR: pandoc is not installed or not in PATH.

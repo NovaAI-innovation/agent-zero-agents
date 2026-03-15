@@ -1,1 +1,4 @@
-echo "pdf-creator scaffold ready. Use Pandoc-based pipeline to generate PDFs from sample.md."
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "pdf-creator v2 ready: use scripts/build_sale_ready_pdf.sh <input> [output]"

@@ -1,0 +1,17 @@
+{
+  "name": "mdcourse-gen-redesign",
+  "title": "MD Course Generator (Redesign)",
+  "description": "Specialized course-generation agent that runs an 8-stage pipeline with strict quality gates, elaboration loops, and recovery for incomplete outputs.",
+  "type": "specialized",
+  "version": "1.0.0",
+  "context": "Use this agent to design and package premium markdown course products with deep module content, assessment diversity, multimedia sourcing, strategic marketing, value-based pricing, and production-ready delivery artifacts.",
+  "prompts": {
+    "role": "prompts/agent.system.main.role.md",
+    "override": "prompts/override.md"
+  },
+  "skills": [],
+  "config": {
+    "stages": 8,
+    "quality_gates_required": true
+  }
+}

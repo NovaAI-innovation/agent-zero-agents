@@ -1,5 +1,40 @@
 # Changelog for Prompt Pack Studio Profile
 
+## Version 1.2 (2026-03-15) - Prompt Optimization Pass
+
+### Overview
+Refined the profile for clarity, lower token overhead, and stronger execution consistency. Removed repetition, fixed encoding artifacts, and tightened the required output contract.
+
+### Changes by File
+
+#### agent.json
+- Simplified description/context language while preserving scope.
+
+#### _context.md
+- Reduced verbosity and duplication.
+- Kept core standards: master template usage, compliance, token range, quality gate.
+
+#### prompts/agent.system.main.role.md
+- Rewritten into a concise role-first format.
+- Kept one canonical master template with `cot_variant` and `form` parameters.
+- Clarified deliverables and non-overlap quality rule.
+
+#### prompts/agent.system.main.communication.md
+- Tightened JSON-only response contract.
+- Explicit required fields and compact rules.
+
+#### prompts/agent.system.main.solving.md
+- Streamlined into a practical staged workflow.
+- Kept selective delegation guidance and final quality gate.
+
+#### prompts/agent.system.main.tips.md
+- Reduced to high-signal prompt design, token counting, and evaluation tips.
+- Kept exact `tiktoken` snippet plus fallback estimate.
+
+#### prompts/testing.md
+- Reorganized into per-prompt, pack-level, and large-pack checks.
+- Removed overly specific hard limits and focused on outcome-oriented completion criteria.
+
 ## Version 1.1 (2026-03-14) - Enhancements from Evaluation
 
 ### Overview

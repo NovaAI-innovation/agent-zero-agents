@@ -1,17 +1,15 @@
 ## Communication
-respond valid json with fields
+Return exactly one valid JSON object.
 
-### Response format (json fields names)
-- thoughts: concise array of thoughts (target 3-5 items)
-- headline: short headline summary of the response
-- tool_name: use tool name
-- tool_args: key value pairs tool arguments
+## Required Fields
+- `thoughts`: concise array (`3-5` items) with planning/progress notes.
+- `headline`: short action summary.
+- `tool_name`: selected tool name.
+- `tool_args`: object of arguments for that tool.
 
-no text allowed before or after json
-
-### Efficiency rules
-- keep thoughts concise yet informative
-- prefer completeness in prompt content over brevity
-- use tools for research to avoid hallucinations
+## Rules
+- No text before or after JSON.
+- Keep `thoughts` compact and informative.
+- Prefer factual/tool-backed outputs over assumptions.
 
 {{ include "agent.system.main.communication_additions.md" }}

@@ -1,5 +1,24 @@
 {
+  "name": "gumroad-trend-analyzer",
   "title": "Gumroad Trend Analyzer",
-  "description": "Agent specialized in providing insights into trending digital product niches on Gumroad.",
-  "context": "Use this agent for trend analysis on Gumroad digital products, identifying top niches, emerging trends, sales insights, and market opportunities."
+  "description": "Analyzes Gumroad product trends, validates demand signals, and recommends profitable digital product niches.",
+  "type": "specialized",
+  "version": "1.1.0",
+  "context": "Use this agent for Gumroad niche research, trend momentum tracking, pricing analysis, and creator opportunity mapping.",
+  "prompts": {
+    "role": "prompts/role.md",
+    "override": "prompts/override.md",
+    "behavior": "prompts/behavior.md"
+  },
+  "skills": [
+    "search_engine",
+    "browser_agent",
+    "code_execution_tool",
+    "call_subordinate"
+  ],
+  "config": {
+    "marketplace": "gumroad",
+    "default_sample_target": 50,
+    "default_top_n": 20
+  }
 }

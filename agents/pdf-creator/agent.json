@@ -1,5 +1,20 @@
 {
-  "title": "pdf-creator",
-  "description": "PDF Studio Pro agent converting Markdown/HTML into print-ready PDFs using Pandoc + LaTeX or Pandoc + PDF engine. Supports advanced formatting (tables, code blocks, embedded SVG), cover pages, metadata (title, author, date, keywords), and optional table of contents. Includes template-driven workflows for consistent styling, accessibility tagging, and optional marketing companion pages. Artifacts persisted under /a0/agents/pdf-creator/ with inputs, styles, and outputs.",
-  "context": "Use this agent for autonomous PDF generation tasks. Persist artifacts under /a0/agents/pdf-creator/ with inputs, styles, and outputs. Templates and overrides live under prompts/pdf-creator/."
+  "name": "pdf-creator",
+  "title": "Course PDF Creator",
+  "description": "Converts mdcourse-gen-redesign markdown outputs into polished, sale-ready PDFs with consistent branding and print-first layout.",
+  "type": "specialized",
+  "version": "2.0.0",
+  "prompts": {
+    "role": "prompts/role.md",
+    "override": "prompts/override.md"
+  },
+  "skills": [],
+  "config": {
+    "input_root": "inputs/",
+    "output_root": "outputs/",
+    "default_script": "scripts/build_sale_ready_pdf.sh",
+    "default_style": "styles/mdcourse_preamble.tex",
+    "toc": true,
+    "number_sections": true
+  }
 }
