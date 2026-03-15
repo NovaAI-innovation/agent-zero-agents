@@ -1,0 +1,176 @@
+
+kpathsea: Running mktextfm Arial
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Could not map source abbreviation A for Arial.
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Need to update /usr/share/texlive/texmf-dist/fonts/map/fontname/special.map?
+mktextfm: Running mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Arial
+This is METAFONT, Version 2.71828182 (TeX Live 2025/Debian) (preloaded base=mf)
+
+kpathsea: Running mktexmf Arial
+
+! I can't find file `Arial'.
+<*> ...=ljfour; mag:=1; ; nonstopmode; input Arial
+                                                  
+Please type another input file name
+! Emergency stop.
+<*> ...=ljfour; mag:=1; ; nonstopmode; input Arial
+                                                  
+Transcript written on mfput.log.
+grep: Arial.log: No such file or directory
+mktextfm: `mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Arial' failed to make Arial.tfm.
+kpathsea: Appending font creation commands to /tmp/tex2pdf.-172d3df251ec94f8/missfont.log.
+
+kpathsea: Running mktextfm Helvetica
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Could not map source abbreviation H for Helvetica.
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Need to update /usr/share/texlive/texmf-dist/fonts/map/fontname/special.map?
+mktextfm: Running mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Helvetica
+This is METAFONT, Version 2.71828182 (TeX Live 2025/Debian) (preloaded base=mf)
+
+kpathsea: Running mktexmf Helvetica
+
+! I can't find file `Helvetica'.
+<*> ...our; mag:=1; ; nonstopmode; input Helvetica
+                                                  
+Please type another input file name
+! Emergency stop.
+<*> ...our; mag:=1; ; nonstopmode; input Helvetica
+                                                  
+Transcript written on mfput.log.
+grep: Helvetica.log: No such file or directory
+mktextfm: `mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Helvetica' failed to make Helvetica.tfm.
+
+kpathsea: Running mktextfm Arial
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Could not map source abbreviation A for Arial.
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Need to update /usr/share/texlive/texmf-dist/fonts/map/fontname/special.map?
+mktextfm: Running mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Arial
+This is METAFONT, Version 2.71828182 (TeX Live 2025/Debian) (preloaded base=mf)
+
+kpathsea: Running mktexmf Arial
+
+! I can't find file `Arial'.
+<*> ...=ljfour; mag:=1; ; nonstopmode; input Arial
+                                                  
+Please type another input file name
+! Emergency stop.
+<*> ...=ljfour; mag:=1; ; nonstopmode; input Arial
+                                                  
+Transcript written on mfput.log.
+grep: Arial.log: No such file or directory
+mktextfm: `mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Arial' failed to make Arial.tfm.
+kpathsea: Appending font creation commands to /tmp/tex2pdf.-172d3df251ec94f8/missfont.log.
+
+kpathsea: Running mktextfm Helvetica
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Could not map source abbreviation H for Helvetica.
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Need to update /usr/share/texlive/texmf-dist/fonts/map/fontname/special.map?
+mktextfm: Running mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Helvetica
+This is METAFONT, Version 2.71828182 (TeX Live 2025/Debian) (preloaded base=mf)
+
+kpathsea: Running mktexmf Helvetica
+
+! I can't find file `Helvetica'.
+<*> ...our; mag:=1; ; nonstopmode; input Helvetica
+                                                  
+Please type another input file name
+! Emergency stop.
+<*> ...our; mag:=1; ; nonstopmode; input Helvetica
+                                                  
+Transcript written on mfput.log.
+grep: Helvetica.log: No such file or directory
+mktextfm: `mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Helvetica' failed to make Helvetica.tfm.
+
+kpathsea: Running mktextfm Arial
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Could not map source abbreviation A for Arial.
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Need to update /usr/share/texlive/texmf-dist/fonts/map/fontname/special.map?
+mktextfm: Running mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Arial
+This is METAFONT, Version 2.71828182 (TeX Live 2025/Debian) (preloaded base=mf)
+
+kpathsea: Running mktexmf Arial
+
+! I can't find file `Arial'.
+<*> ...=ljfour; mag:=1; ; nonstopmode; input Arial
+                                                  
+Please type another input file name
+! Emergency stop.
+<*> ...=ljfour; mag:=1; ; nonstopmode; input Arial
+                                                  
+Transcript written on mfput.log.
+grep: Arial.log: No such file or directory
+mktextfm: `mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Arial' failed to make Arial.tfm.
+kpathsea: Appending font creation commands to /tmp/tex2pdf.-172d3df251ec94f8/missfont.log.
+
+kpathsea: Running mktextfm Helvetica
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Could not map source abbreviation H for Helvetica.
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Need to update /usr/share/texlive/texmf-dist/fonts/map/fontname/special.map?
+mktextfm: Running mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Helvetica
+This is METAFONT, Version 2.71828182 (TeX Live 2025/Debian) (preloaded base=mf)
+
+kpathsea: Running mktexmf Helvetica
+
+! I can't find file `Helvetica'.
+<*> ...our; mag:=1; ; nonstopmode; input Helvetica
+                                                  
+Please type another input file name
+! Emergency stop.
+<*> ...our; mag:=1; ; nonstopmode; input Helvetica
+                                                  
+Transcript written on mfput.log.
+grep: Helvetica.log: No such file or directory
+mktextfm: `mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Helvetica' failed to make Helvetica.tfm.
+
+kpathsea: Running mktextfm Arial
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Could not map source abbreviation A for Arial.
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Need to update /usr/share/texlive/texmf-dist/fonts/map/fontname/special.map?
+mktextfm: Running mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Arial
+This is METAFONT, Version 2.71828182 (TeX Live 2025/Debian) (preloaded base=mf)
+
+kpathsea: Running mktexmf Arial
+
+! I can't find file `Arial'.
+<*> ...=ljfour; mag:=1; ; nonstopmode; input Arial
+                                                  
+Please type another input file name
+! Emergency stop.
+<*> ...=ljfour; mag:=1; ; nonstopmode; input Arial
+                                                  
+Transcript written on mfput.log.
+grep: Arial.log: No such file or directory
+mktextfm: `mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Arial' failed to make Arial.tfm.
+kpathsea: Appending font creation commands to /tmp/tex2pdf.-172d3df251ec94f8/missfont.log.
+
+kpathsea: Running mktextfm Helvetica
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Could not map source abbreviation H for Helvetica.
+/usr/share/texlive/texmf-dist/web2c/mktexnam: Need to update /usr/share/texlive/texmf-dist/fonts/map/fontname/special.map?
+mktextfm: Running mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Helvetica
+This is METAFONT, Version 2.71828182 (TeX Live 2025/Debian) (preloaded base=mf)
+
+kpathsea: Running mktexmf Helvetica
+
+! I can't find file `Helvetica'.
+<*> ...our; mag:=1; ; nonstopmode; input Helvetica
+                                                  
+Please type another input file name
+! Emergency stop.
+<*> ...our; mag:=1; ; nonstopmode; input Helvetica
+                                                  
+Transcript written on mfput.log.
+grep: Helvetica.log: No such file or directory
+mktextfm: `mf-nowin -progname=mf \mode:=ljfour; mag:=1; ; nonstopmode; input Helvetica' failed to make Helvetica.tfm.
+[WARNING] Missing character: There is no ’ (U+2019) ("2019) in font ecrm1000!
+[WARNING] Missing character: There is no ’ (U+2019) ("2019) in font ecrm1000!
+[WARNING] Missing character: There is no ’ (U+2019) ("2019) in font ecrm1000!
+[WARNING] Missing character: There is no “ (U+201C) ("201C) in font ecrm1000!
+[WARNING] Missing character: There is no ” (U+201D) ("201D) in font ecrm1000!
+[WARNING] Missing character: There is no “ (U+201C) ("201C) in font ecrm1000!
+[WARNING] Missing character: There is no “ (U+201C) ("201C) in font ecrm1000!
+[WARNING] Missing character: There is no “ (U+201C) ("201C) in font ecrm1000!
+[WARNING] Missing character: There is no ” (U+201D) ("201D) in font ecrm1000!
+[WARNING] Missing character: There is no ’ (U+2019) ("2019) in font ecrm1000!
+[WARNING] Missing character: There is no — (U+2014) ("2014) in font ecrm1000!
+[WARNING] Missing character: There is no — (U+2014) ("2014) in font ecrm1000!
+[WARNING] Missing character: There is no — (U+2014) ("2014) in font ecrm1000!
+[WARNING] Missing character: There is no — (U+2014) ("2014) in font ecrm1000!
+[WARNING] Missing character: There is no — (U+2014) ("2014) in font ecrm1000!
+[WARNING] Missing character: There is no — (U+2014) ("2014) in font ecrm1000!
+[WARNING] Missing character: There is no ’ (U+2019) ("2019) in font ecrm1000!
+[WARNING] Missing character: There is no ’ (U+2019) ("2019) in font ecrm1000!
+[WARNING] Missing character: There is no “ (U+201C) ("201C) in font ecrm1000!
+[WARNING] Missing character: There is no ” (U+201D) ("201D) in font ecrm1000!

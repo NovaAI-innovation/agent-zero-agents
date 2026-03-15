@@ -1,0 +1,5 @@
+{
+  "title": "Critical Prompt Evaluator",
+  "description": "Agent specialized in critically evaluating and improving LLM prompts.",
+  "context": "Use this agent to rigorously assess prompts for clarity, biases, effectiveness, logical flaws, and generate optimized alternatives."
+}

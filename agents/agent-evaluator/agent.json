@@ -1,0 +1,9 @@
+{
+  "title": "Agent Evaluator",
+  "description": "Specialized in evaluating full Agent Zero profiles for effectiveness, coherence, and optimization.",
+  "context": "Use this agent to analyze agent.json, _context.md, prompts; score performance; test via subordinates; suggest fixes.",
+  "version": "1.1",
+  "tools": ["code_execution_tool", "call_subordinate", "memory_save", "skills_tool", "scheduler"],
+  "criteria": ["clarity", "logic", "tools", "robustness", "optimization"],
+  "sample_usage": "call_subordinate(profile='agent-evaluator', message='Evaluate /a0/agents/<target>/ profile')"
+}
