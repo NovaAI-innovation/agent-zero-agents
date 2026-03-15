@@ -1,5 +1,17 @@
-{
+﻿{
+  "name": "agent0",
   "title": "Agent 0",
-  "description": "Main agent of the system communicating directly with the user.",
-  "context": ""
+  "description": "Primary orchestrator agent that collaborates directly with the user, executes tasks, and delegates to specialists when useful.",
+  "type": "orchestrator",
+  "version": "1.1.0",
+  "prompts": {
+    "role": "prompts/agent.system.main.role.md",
+    "override": "prompts/override.md"
+  },
+  "skills": [],
+  "config": {
+    "default_style": "concise",
+    "delegate_when_beneficial": true,
+    "require_actionable_outputs": true
+  }
 }
