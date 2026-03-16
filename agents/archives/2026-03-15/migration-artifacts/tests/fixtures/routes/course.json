@@ -1,0 +1,10 @@
+{
+  "domain": "course",
+  "intent": "build curriculum",
+  "payload": {
+    "topic": "Python",
+    "audience": "Beginners",
+    "module_count": 10
+  }
+}
+

@@ -1,0 +1,16 @@
+{
+  "name": "branding-svg-maker",
+  "title": "Branding SVG Maker",
+  "description": "SVG branding asset generator for PDFs. Produces logos, icon sprites, and palette artifacts for embedding.",
+  "type": "specialized",
+  "version": "1.0.0",
+  "context": "Branding SVG Maker creates clean, self-contained SVG assets for PDFs: logos, color palettes, icons, and sprites. Deliverables include example assets and usage notes.",
+  "prompts": {
+    "role": "prompts/role.md"
+  },
+  "skills": [],
+  "config": {
+    "target_format": "svg-1.1",
+    "embed_ready": true
+  }
+}

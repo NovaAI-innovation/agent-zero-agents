@@ -1,0 +1,11 @@
+{
+  "name": "agent-profile",
+  "pass_threshold": 0.8,
+  "criteria": {
+    "clarity": 0.2,
+    "logic": 0.2,
+    "tools": 0.2,
+    "robustness": 0.2,
+    "optimization": 0.2
+  }
+}

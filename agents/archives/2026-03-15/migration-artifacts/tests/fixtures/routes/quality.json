@@ -1,0 +1,17 @@
+{
+  "domain": "quality",
+  "intent": "evaluate prompt rubric",
+  "payload": {
+    "mode": "criteria",
+    "rubric": "prompt-eval",
+    "scores": {
+      "clarity": 0.9,
+      "specificity": 0.85,
+      "structure": 0.8,
+      "bias_free": 0.9,
+      "robustness": 0.8,
+      "efficiency": 0.85
+    }
+  }
+}
+

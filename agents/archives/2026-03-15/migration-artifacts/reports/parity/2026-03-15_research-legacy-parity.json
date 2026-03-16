@@ -1,0 +1,51 @@
+﻿{
+  "fixture_count": 3,
+  "all_passed": true,
+  "runs": [
+    {
+      "fixture": "research.json",
+      "signal_count": 2,
+      "top_category": "templates",
+      "contract_results": {
+        "researcher": {
+          "passed": true,
+          "missing_fields": []
+        },
+        "gumroad-trend-analyzer": {
+          "passed": true,
+          "missing_fields": []
+        }
+      }
+    },
+    {
+      "fixture": "research_mixed.json",
+      "signal_count": 3,
+      "top_category": "courses",
+      "contract_results": {
+        "researcher": {
+          "passed": true,
+          "missing_fields": []
+        },
+        "gumroad-trend-analyzer": {
+          "passed": true,
+          "missing_fields": []
+        }
+      }
+    },
+    {
+      "fixture": "research_sparse.json",
+      "signal_count": 1,
+      "top_category": "prompts",
+      "contract_results": {
+        "researcher": {
+          "passed": true,
+          "missing_fields": []
+        },
+        "gumroad-trend-analyzer": {
+          "passed": true,
+          "missing_fields": []
+        }
+      }
+    }
+  ]
+}

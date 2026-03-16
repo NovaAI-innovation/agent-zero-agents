@@ -1,0 +1,36 @@
+﻿{
+  "sample_count": 6,
+  "all_expected": true,
+  "results": [
+    {
+      "sample": "quality",
+      "passed": true,
+      "expected": true
+    },
+    {
+      "sample": "packaging",
+      "passed": true,
+      "expected": true
+    },
+    {
+      "sample": "course",
+      "passed": true,
+      "expected": true
+    },
+    {
+      "sample": "research",
+      "passed": true,
+      "expected": true
+    },
+    {
+      "sample": "content",
+      "passed": true,
+      "expected": true
+    },
+    {
+      "sample": "synthetic-broken-profile",
+      "passed": false,
+      "expected": false
+    }
+  ]
+}

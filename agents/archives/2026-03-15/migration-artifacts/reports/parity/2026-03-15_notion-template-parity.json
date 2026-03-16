@@ -1,0 +1,47 @@
+﻿{
+  "sample_count": 5,
+  "passed_count": 5,
+  "all_passed": true,
+  "results": [
+    {
+      "sample_id": 1,
+      "product_name": "Creator OS",
+      "validation_passed": true,
+      "docs_ok": true,
+      "listing_ok": true,
+      "passed": true
+    },
+    {
+      "sample_id": 2,
+      "product_name": "Team Dashboard",
+      "validation_passed": true,
+      "docs_ok": true,
+      "listing_ok": true,
+      "passed": true
+    },
+    {
+      "sample_id": 3,
+      "product_name": "Freelancer CRM",
+      "validation_passed": true,
+      "docs_ok": true,
+      "listing_ok": true,
+      "passed": true
+    },
+    {
+      "sample_id": 4,
+      "product_name": "Study Vault",
+      "validation_passed": true,
+      "docs_ok": true,
+      "listing_ok": true,
+      "passed": true
+    },
+    {
+      "sample_id": 5,
+      "product_name": "Launch Planner",
+      "validation_passed": true,
+      "docs_ok": true,
+      "listing_ok": true,
+      "passed": true
+    }
+  ]
+}

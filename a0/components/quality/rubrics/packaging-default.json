@@ -1,0 +1,10 @@
+{
+  "name": "packaging-default",
+  "pass_threshold": 0.8,
+  "criteria": {
+    "clarity": 0.25,
+    "structure": 0.25,
+    "compliance": 0.25,
+    "robustness": 0.25
+  }
+}

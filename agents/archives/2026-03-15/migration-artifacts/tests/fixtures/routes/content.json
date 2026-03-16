@@ -1,0 +1,10 @@
+{
+  "domain": "content",
+  "intent": "orchestrate video content",
+  "payload": {
+    "topic": "Python Automation",
+    "audience": "Beginners",
+    "channel": "YouTube"
+  }
+}
+

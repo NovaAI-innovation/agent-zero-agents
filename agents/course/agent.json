@@ -1,0 +1,13 @@
+{
+  "name": "course",
+  "title": "Course Domain",
+  "description": "Stage-based course pipeline domain that orchestrates blueprint, content, assessment, multimedia, marketing, pricing, validation, and delivery.",
+  "type": "specialized",
+  "version": "1.0.0",
+  "prompts": {
+    "role": "prompts/role.md",
+    "override": "prompts/override.md"
+  },
+  "skills": [],
+  "config": {}
+}

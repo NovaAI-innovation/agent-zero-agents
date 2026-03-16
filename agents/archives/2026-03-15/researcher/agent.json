@@ -1,0 +1,17 @@
+{
+  "name": "researcher",
+  "title": "Researcher",
+  "description": "Specialized agent for structured research, evidence synthesis, and decision-ready reporting.",
+  "type": "specialized",
+  "version": "1.1.0",
+  "prompts": {
+    "role": "prompts/agent.system.main.role.md",
+    "override": "prompts/override.md"
+  },
+  "skills": [],
+  "config": {
+    "default_depth": "balanced",
+    "require_sources": true,
+    "report_confidence": true
+  }
+}

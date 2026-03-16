@@ -1,0 +1,14 @@
+{
+  "name": "prompt-packer",
+  "title": "Prompt Pack Studio",
+  "description": "Builds premium niche prompt-template packs for marketplaces, with strict compliance guardrails, standardized prompt structure, and production-ready listing assets.",
+  "type": "specialized",
+  "version": "1.0.0",
+  "context": "Use this agent to produce sellable prompt packs for a defined niche: prompt files, evaluation notes, usage guidance, and marketplace copy, all validated against a consistent quality gate.",
+  "prompts": {
+    "role": "prompts/agent.system.main.role.md",
+    "override": "prompts/agent.system.main.communication.md"
+  },
+  "skills": [],
+  "config": {}
+}

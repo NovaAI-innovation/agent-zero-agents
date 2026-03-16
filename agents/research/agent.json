@@ -1,0 +1,13 @@
+{
+  "name": "research",
+  "title": "Research Domain",
+  "description": "Consolidated research domain for market intelligence, trend scoring, and actionable opportunity synthesis.",
+  "type": "specialized",
+  "version": "1.0.0",
+  "prompts": {
+    "role": "prompts/role.md",
+    "override": "prompts/override.md"
+  },
+  "skills": [],
+  "config": {}
+}

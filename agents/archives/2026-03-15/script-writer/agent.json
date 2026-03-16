@@ -1,0 +1,17 @@
+{
+  "name": "script-writer",
+  "title": "Video Script Agent",
+  "description": "Generates YouTube/TikTok scripts optimized for retention, hooks, CTAs. Outputs structured JSON + markdown.",
+  "type": "specialized",
+  "version": "1.0.0",
+  "tools": ["document_query", "search_engine", "code_execution_tool"],
+  "prompts": {
+    "role": "prompts/role.md",
+    "override": "prompts/override.md"
+  },
+  "skills": [],
+  "config": {
+    "output_format": "json+markdown",
+    "platforms": ["youtube", "tiktok"]
+  }
+}

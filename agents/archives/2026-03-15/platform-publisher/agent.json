@@ -1,0 +1,17 @@
+{
+  "name": "platform-publisher",
+  "title": "Platform Publisher",
+  "description": "Optimizes and publishes videos to YouTube, TikTok, Instagram Reels, Twitter",
+  "version": "1.0.0",
+  "type": "specialized",
+  "prompts": {
+    "role": "prompts/role.md",
+    "override": "prompts/override.md"
+  },
+  "tools": ["browser_agent", "code_execution_tool"],
+  "skills": [],
+  "config": {
+    "platforms": ["youtube", "tiktok", "instagram", "twitter"],
+    "formats": {"youtube": "1080p MP4", "tiktok": "vertical 1080x1920", "instagram": "square 1080x1080", "twitter": "16:9 1080x720"}
+  }
+}

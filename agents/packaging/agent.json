@@ -1,0 +1,13 @@
+{
+  "name": "packaging",
+  "title": "Packaging Domain",
+  "description": "Centralized packaging domain for template generation, product assembly, listing content, and delivery artifacts.",
+  "type": "specialized",
+  "version": "1.0.0",
+  "prompts": {
+    "role": "prompts/role.md",
+    "override": "prompts/override.md"
+  },
+  "skills": [],
+  "config": {}
+}

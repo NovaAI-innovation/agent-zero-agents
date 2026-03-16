@@ -1,0 +1,16 @@
+{
+  "domain": "packaging",
+  "intent": "prepare listing bundle",
+  "payload": {
+    "package_type": "prompt_pack",
+    "product_name": "Prompt Kit",
+    "niche": "Productivity",
+    "audience": "Creators",
+    "artifacts": [
+      "README.md",
+      "listing.md",
+      "EVAL_OVERVIEW.md"
+    ]
+  }
+}
+

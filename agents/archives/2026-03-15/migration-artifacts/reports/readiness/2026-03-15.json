@@ -1,0 +1,80 @@
+{
+  "total_checks": 16,
+  "passed_checks": 16,
+  "missing_checks": 0,
+  "legacy_modes": {
+    "prompt-evaluator": "Cutover",
+    "agent-evaluator": "Cutover",
+    "prompt-packer": "Cutover",
+    "notion-template-generator": "Cutover",
+    "researcher": "Cutover",
+    "gumroad-trend-analyzer": "Cutover",
+    "mdcourse-gen": "Cutover"
+  },
+  "checks": [
+    {
+      "path": "quality/agent.json",
+      "exists": true
+    },
+    {
+      "path": "packaging/agent.json",
+      "exists": true
+    },
+    {
+      "path": "course/agent.json",
+      "exists": true
+    },
+    {
+      "path": "research/agent.json",
+      "exists": true
+    },
+    {
+      "path": "branding/agent.json",
+      "exists": true
+    },
+    {
+      "path": "content/agent.json",
+      "exists": true
+    },
+    {
+      "path": "infrastructure/agent.json",
+      "exists": true
+    },
+    {
+      "path": "agent0/scripts/dispatch.py",
+      "exists": true
+    },
+    {
+      "path": "agent0/scripts/routed_call_helper.py",
+      "exists": true
+    },
+    {
+      "path": "migration_smoke_tests.py",
+      "exists": true
+    },
+    {
+      "path": "MIGRATION_STATUS.md",
+      "exists": true
+    },
+    {
+      "path": "DEPRECATION_MATRIX.md",
+      "exists": true
+    },
+    {
+      "path": "MIGRATION_TELEMETRY.md",
+      "exists": true
+    },
+    {
+      "path": "MIGRATION_FUNCTIONAL_COVERAGE.md",
+      "exists": true
+    },
+    {
+      "path": "archives/2026-03-15/README.md",
+      "exists": true
+    },
+    {
+      "path": "scripts/oldjson_reconciliation_check.py",
+      "exists": true
+    }
+  ]
+}

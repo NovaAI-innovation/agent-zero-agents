@@ -1,0 +1,10 @@
+{
+  "domain": "branding",
+  "intent": "build brand kit",
+  "payload": {
+    "niche": "Productivity",
+    "audience": "Creators",
+    "product_name": "Prompt Kit"
+  }
+}
+

@@ -1,0 +1,14 @@
+{
+  "name": "content",
+  "title": "Content Domain",
+  "description": "Coordinates script, visuals, voice, and publishing outputs into a unified content workflow.",
+  "type": "specialized",
+  "version": "1.0.0",
+  "prompts": {
+    "role": "prompts/role.md",
+    "override": "prompts/override.md"
+  },
+  "skills": [],
+  "config": {}
+}
+

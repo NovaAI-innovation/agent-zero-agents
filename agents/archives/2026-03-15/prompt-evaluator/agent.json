@@ -1,0 +1,13 @@
+{
+  "name": "prompt-evaluator",
+  "title": "Critical Prompt Evaluator",
+  "description": "Agent specialized in critically evaluating and improving LLM prompts.",
+  "type": "specialized",
+  "version": "1.0.0",
+  "context": "Use this agent to rigorously assess prompts for clarity, biases, effectiveness, logical flaws, and generate optimized alternatives.",
+  "prompts": {
+    "role": "prompts/main.role.md"
+  },
+  "skills": [],
+  "config": {}
+}

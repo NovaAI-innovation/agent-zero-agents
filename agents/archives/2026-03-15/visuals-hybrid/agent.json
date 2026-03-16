@@ -1,0 +1,14 @@
+{
+    "name": "visuals-hybrid",
+    "title": "Visuals Hybrid",
+    "description": "Video Visuals Agent for production pipelines. Hybrid workflow: image-fetcher (royalty-free B-roll) primary + local-image-gen (Stable Diffusion) fallback with quality validation.",
+    "context": "Use this agent for video production visuals: script-matched B-roll, thumbnails, overlays, social formats. Outputs organized /a0/usr/workdir/ folders with licensing metadata.",
+    "type": "specialized",
+    "version": "1.0.0",
+    "prompts": {
+        "role": "prompts/agent.system.main.role.md",
+        "override": "prompts/agent.system.main.communication_additions.md"
+    },
+    "skills": [],
+    "config": {}
+}

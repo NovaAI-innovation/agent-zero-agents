@@ -1,0 +1,13 @@
+{
+  "name": "quality",
+  "title": "Quality Domain",
+  "description": "Centralized quality evaluation domain for prompt, agent, and package assessments with shared scoring and feedback components.",
+  "type": "specialized",
+  "version": "1.0.0",
+  "prompts": {
+    "role": "prompts/role.md",
+    "override": "prompts/override.md"
+  },
+  "skills": [],
+  "config": {}
+}

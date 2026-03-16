@@ -1,0 +1,14 @@
+{
+  "name": "infrastructure",
+  "title": "Infrastructure Domain",
+  "description": "Handles developer operations, environment checks, and deployment-readiness tasks with strict safety boundaries.",
+  "type": "specialized",
+  "version": "1.0.0",
+  "prompts": {
+    "role": "prompts/role.md",
+    "override": "prompts/override.md"
+  },
+  "skills": [],
+  "config": {}
+}
+

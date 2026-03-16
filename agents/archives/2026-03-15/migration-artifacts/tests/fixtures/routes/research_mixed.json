@@ -1,0 +1,39 @@
+{
+  "domain": "research",
+  "intent": "mixed niche analysis",
+  "payload": {
+    "signals": [
+      {
+        "title": "AI Prompt Suite",
+        "category": "prompts",
+        "price_usd": 59,
+        "source": "gumroad",
+        "creator": "Studio Alpha",
+        "sales_badge": "bestseller",
+        "timeframe": "popular_weekly"
+      },
+      {
+        "title": "Template Vault",
+        "category": "templates",
+        "price_usd": 39,
+        "source": "gumroad",
+        "creator": "Studio Beta",
+        "sales_badge": "trending",
+        "timeframe": "popular_monthly"
+      },
+      {
+        "title": "Creator Course",
+        "category": "courses",
+        "price_usd": 129,
+        "source": "gumroad",
+        "creator": "Coach Gamma",
+        "sales_badges": [
+          "popular",
+          "hot"
+        ],
+        "timeframe": "popular_monthly"
+      }
+    ]
+  }
+}
+

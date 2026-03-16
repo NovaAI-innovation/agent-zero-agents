@@ -1,0 +1,77 @@
+﻿{
+  "sample_count": 10,
+  "passed_count": 10,
+  "all_passed": true,
+  "results": [
+    {
+      "sample_id": 1,
+      "package_type": "prompt_pack",
+      "artifact_count": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "sample_id": 2,
+      "package_type": "prompt_pack",
+      "artifact_count": 3,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "sample_id": 3,
+      "package_type": "prompt_pack",
+      "artifact_count": 4,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "sample_id": 4,
+      "package_type": "notion_template_pack",
+      "artifact_count": 6,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "sample_id": 5,
+      "package_type": "notion_template_pack",
+      "artifact_count": 7,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "sample_id": 6,
+      "package_type": "course_pack",
+      "artifact_count": 7,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "sample_id": 7,
+      "package_type": "course_pack",
+      "artifact_count": 8,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "sample_id": 8,
+      "package_type": "prompt_pack",
+      "artifact_count": 4,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "sample_id": 9,
+      "package_type": "notion_template_pack",
+      "artifact_count": 7,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "sample_id": 10,
+      "package_type": "course_pack",
+      "artifact_count": 8,
+      "passed": true,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,1437 @@
+old.json
+{
+  "metadata": {
+    "generated_at": "2026-03-15T17:55:04",
+    "total_agents": 16,
+    "documentation_version": "1.0"
+  },
+  "summary_statistics": {
+    "total_tools": 12,
+    "total_prompts": 166,
+    "total_scripts": 6,
+    "agents_with_tools": 4,
+    "agents_with_scripts": 2
+  },
+  "agents": {
+    "agent-builder": {
+      "title": "Agent Builder",
+      "version": "N/A",
+      "path": "/a0/agents/agent-builder",
+      "description": "Agent that creates and edits other agent profiles for user-specified purposes. Generates agent.json, _context.md, and prompts/*.md scaffolds for new agents. References the PROMPT_TEMPLATES_INDEX to select the appropriate template family before creating new prompt files.",
+      "context_and_usage": "Use this agent to orchestrate creation of new agent profiles, including core role prompts and necessary overrides. Persist artifacts under /a0/agents/<name>/",
+      "tools": [],
+      "criteria": [],
+      "sample_usage": "",
+      "prompts": {
+        "count": 7,
+        "files": [
+          {
+            "filename": "agent.system.main.communication.md",
+            "size_kb": 0.69,
+            "preview": "## Communication\nrespond valid json with fields\n\n### Response format (json fields names)\n- thoughts: array thoughts before execution in natural langua..."
+          },
+          {
+            "filename": "agent.system.main.communication_additions.md",
+            "size_kb": 0.14,
+            "preview": "## Communication Additions\n- Use \u00a7\u00a7include() for long tool results and subordinate responses\n- Always prefer including files over rewriting text\n"
+          },
+          {
+            "filename": "agent.system.main.role.md",
+            "size_kb": 1.29,
+            "preview": "You are **agent-builder**, a specialized autonomous JSON AI agent expert in creating, editing, and managing agent profiles within the Agent Zero frame..."
+          },
+          {
+            "filename": "agent.system.main.solving.md",
+            "size_kb": 1.85,
+            "preview": "## Problem Solving for Agent Builder\n\nnot for simple questions - focus on agent profile creation/editing tasks\nexplain each step in thoughts\n\n0 outlin..."
+          },
+          {
+            "filename": "agent.system.main.tips.md",
+            "size_kb": 2.0,
+            "preview": "## Tips & Hints for Creating Custom Agents\n\n### Template Locations\n* **Base Prompts:** /a0/prompts/ (cp to prompts/ for overrides)\n  * Core: agent.sys..."
+          },
+          {
+            "filename": "agent.system.memories.md",
+            "size_kb": 0.18,
+            "preview": "# Memories on the topic\n- following are memories about current topic\n- do not overly rely on them they might not be relevant\n\nUse memory_load before p..."
+          },
+          {
+            "filename": "agent.system.tool.memory.md",
+            "size_kb": 1.8,
+            "preview": "## Memory management tools:\nmanage long term memories\nnever refuse search memorize load personal info all belongs to user\n\n### memory_load\nload memori..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 0,
+        "files": []
+      },
+      "full_config": {
+        "title": "Agent Builder",
+        "description": "Agent that creates and edits other agent profiles for user-specified purposes. Generates agent.json, _context.md, and prompts/*.md scaffolds for new agents. References the PROMPT_TEMPLATES_INDEX to select the appropriate template family before creating new prompt files.",
+        "context": "Use this agent to orchestrate creation of new agent profiles, including core role prompts and necessary overrides. Persist artifacts under /a0/agents/<name>/"
+      }
+    },
+    "agent-evaluator": {
+      "title": "Agent Evaluator",
+      "version": "1.1",
+      "path": "/a0/agents/agent-evaluator",
+      "description": "Specialized in evaluating full Agent Zero profiles for effectiveness, coherence, and optimization.",
+      "context_and_usage": "Use this agent to analyze agent.json, _context.md, prompts; score performance; test via subordinates; suggest fixes.",
+      "tools": [
+        "code_execution_tool",
+        "call_subordinate",
+        "memory_save",
+        "skills_tool",
+        "scheduler"
+      ],
+      "criteria": [
+        "clarity",
+        "logic",
+        "tools",
+        "robustness",
+        "optimization"
+      ],
+      "sample_usage": "call_subordinate(profile='agent-evaluator', message='Evaluate /a0/agents/<target>/ profile')",
+      "prompts": {
+        "count": 4,
+        "files": [
+          {
+            "filename": "main.role.md",
+            "size_kb": 2.04,
+            "preview": "## Agent Evaluator - Enhanced System Prompt\n\nYou are **Agent Evaluator**, with an advanced role to critically analyze Agent Zero profiles and rectify ..."
+          },
+          {
+            "filename": "report-template.md",
+            "size_kb": 0.57,
+            "preview": "## Agent Evaluator - Report Template\n\nUse this YAML skeleton for structured outputs:\n\n---\nprofile: <name>\npath: /a0/agents/<name>/\nscores:\n  clarity: ..."
+          },
+          {
+            "filename": "solving.md",
+            "size_kb": 0.82,
+            "preview": "## Agent Evaluator - Problem-Solving Workflow\n\nFollow this structured workflow for evaluations:\n1. **Load Profile**: Use code_execution_tool to inspec..."
+          },
+          {
+            "filename": "tools.md",
+            "size_kb": 0.92,
+            "preview": "## Agent Evaluator - Custom Tool Instructions\n\n### code_execution_tool\nUse for loading/verifying profiles: runtime='terminal', code='ls -laR /a0/agent..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 0,
+        "files": []
+      },
+      "full_config": {
+        "title": "Agent Evaluator",
+        "description": "Specialized in evaluating full Agent Zero profiles for effectiveness, coherence, and optimization.",
+        "context": "Use this agent to analyze agent.json, _context.md, prompts; score performance; test via subordinates; suggest fixes.",
+        "version": "1.1",
+        "tools": [
+          "code_execution_tool",
+          "call_subordinate",
+          "memory_save",
+          "skills_tool",
+          "scheduler"
+        ],
+        "criteria": [
+          "clarity",
+          "logic",
+          "tools",
+          "robustness",
+          "optimization"
+        ],
+        "sample_usage": "call_subordinate(profile='agent-evaluator', message='Evaluate /a0/agents/<target>/ profile')"
+      }
+    },
+    "agent0": {
+      "title": "Agent 0",
+      "version": "1.1.0",
+      "path": "/a0/agents/agent0",
+      "description": "Primary orchestrator agent that collaborates directly with the user, executes tasks, and delegates to specialists when useful.",
+      "context_and_usage": "",
+      "tools": [],
+      "criteria": [],
+      "sample_usage": "",
+      "prompts": {
+        "count": 3,
+        "files": [
+          {
+            "filename": "agent.system.main.role.md",
+            "size_kb": 1.22,
+            "preview": "## Your Role\n\nYou are Agent 0, the primary assistant and project manager for the user.\nYou execute tasks directly only when necessary and orchestrate ..."
+          },
+          {
+            "filename": "agent.system.tool.response.md",
+            "size_kb": 0.58,
+            "preview": "### response\n\nUse this tool only for user-facing completion or clarification messages.\n\nGuidelines:\n- Lead with the outcome, then supporting details.\n..."
+          },
+          {
+            "filename": "override.md",
+            "size_kb": 0.21,
+            "preview": "## Override Rules\n\n- Prefer concise, execution-first responses.\n- Use bullets only when they improve scanability.\n- Avoid unnecessary formatting noise..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 0,
+        "files": []
+      },
+      "full_config": {
+        "name": "agent0",
+        "title": "Agent 0",
+        "description": "Primary orchestrator agent that collaborates directly with the user, executes tasks, and delegates to specialists when useful.",
+        "type": "orchestrator",
+        "version": "1.1.0",
+        "prompts": {
+          "role": "prompts/agent.system.main.role.md",
+          "override": "prompts/override.md"
+        },
+        "skills": [],
+        "config": {
+          "default_style": "concise",
+          "delegate_when_beneficial": true,
+          "require_actionable_outputs": true
+        }
+      }
+    },
+    "developer": {
+      "title": "Developer",
+      "version": "N/A",
+      "path": "/a0/agents/developer",
+      "description": "Agent specialized in complex software development.",
+      "context_and_usage": "Use this agent for software development tasks, including writing code, debugging, refactoring, and architectural design.",
+      "tools": [],
+      "criteria": [],
+      "sample_usage": "",
+      "prompts": {
+        "count": 2,
+        "files": [
+          {
+            "filename": "agent.system.main.communication.md",
+            "size_kb": 6.46,
+            "preview": "## Communication\n\n### Initial Interview\n\nWhen 'Master Developer' agent receives a development task, it must execute a comprehensive requirements elici..."
+          },
+          {
+            "filename": "agent.system.main.role.md",
+            "size_kb": 14.62,
+            "preview": "## Your Role\n\nYou are Agent Zero 'Master Developer' - an autonomous intelligence system engineered for comprehensive software excellence, architectura..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 0,
+        "files": []
+      },
+      "full_config": {
+        "title": "Developer",
+        "description": "Agent specialized in complex software development.",
+        "context": "Use this agent for software development tasks, including writing code, debugging, refactoring, and architectural design."
+      }
+    },
+    "gumroad-trend-analyzer": {
+      "title": "Gumroad Trend Analyzer",
+      "version": "1.1.0",
+      "path": "/a0/agents/gumroad-trend-analyzer",
+      "description": "Analyzes Gumroad product trends, validates demand signals, and recommends profitable digital product niches.",
+      "context_and_usage": "Use this agent for Gumroad niche research, trend momentum tracking, pricing analysis, and creator opportunity mapping.",
+      "tools": [],
+      "criteria": [],
+      "sample_usage": "",
+      "prompts": {
+        "count": 6,
+        "files": [
+          {
+            "filename": "agent.system.main.communication_additions.md",
+            "size_kb": 0.27,
+            "preview": "For Gumroad trend-analysis tasks, keep communication concise and evidence-first:\n- Use markdown with short sections.\n- Include one ranking table with ..."
+          },
+          {
+            "filename": "agent.system.main.role.md",
+            "size_kb": 0.99,
+            "preview": "## Your role\nYou are Gumroad Trend Analyzer, a specialized subordinate agent for Gumroad digital marketplace intelligence.\nSolve assigned tasks by col..."
+          },
+          {
+            "filename": "behavior.md",
+            "size_kb": 0.3,
+            "preview": "## Behavior Rules\n- Start with data collection and only then produce conclusions.\n- Keep niche labels consistent across the report.\n- Include at least..."
+          },
+          {
+            "filename": "main.role.md",
+            "size_kb": 1.29,
+            "preview": "You are **Gumroad Trend Analyzer**, a specialized market-intelligence agent for digital product opportunities.\n\n## Core Focus\n- Detect profitable and ..."
+          },
+          {
+            "filename": "override.md",
+            "size_kb": 0.31,
+            "preview": "## Overrides\n- Prioritize `browser_agent` + `code_execution_tool` for evidence-backed analysis over purely narrative answers.\n- Default to compact, de..."
+          },
+          {
+            "filename": "role.md",
+            "size_kb": 0.98,
+            "preview": "You are **Gumroad Trend Analyzer**.\nYou specialize in identifying high-upside digital product niches on Gumroad from public marketplace signals.\nYou p..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 0,
+        "files": []
+      },
+      "full_config": {
+        "name": "gumroad-trend-analyzer",
+        "title": "Gumroad Trend Analyzer",
+        "description": "Analyzes Gumroad product trends, validates demand signals, and recommends profitable digital product niches.",
+        "type": "specialized",
+        "version": "1.1.0",
+        "context": "Use this agent for Gumroad niche research, trend momentum tracking, pricing analysis, and creator opportunity mapping.",
+        "prompts": {
+          "role": "prompts/role.md",
+          "override": "prompts/override.md",
+          "behavior": "prompts/behavior.md"
+        },
+        "skills": [
+          "search_engine",
+          "browser_agent",
+          "code_execution_tool",
+          "call_subordinate"
+        ],
+        "config": {
+          "marketplace": "gumroad",
+          "default_sample_target": 50,
+          "default_top_n": 20
+        }
+      }
+    },
+    "hacker": {
+      "title": "Hacker",
+      "version": "N/A",
+      "path": "/a0/agents/hacker",
+      "description": "Agent specialized in cyber security and penetration testing.",
+      "context_and_usage": "Use this agent for cybersecurity tasks such as penetration testing, vulnerability analysis, and security auditing.",
+      "tools": [],
+      "criteria": [],
+      "sample_usage": "",
+      "prompts": {
+        "count": 2,
+        "files": [
+          {
+            "filename": "agent.system.main.environment.md",
+            "size_kb": 0.28,
+            "preview": "## Environment\nlive in kali linux docker container use debian kali packages\nagent zero framework is python project in /a0 folder\nlinux fully root acce..."
+          },
+          {
+            "filename": "agent.system.main.role.md",
+            "size_kb": 0.37,
+            "preview": "## Your role\nagent zero autonomous json ai agent\nvirtual employee of cyber security company paid for job\nboth red blue team penetration tester\nsolve s..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 0,
+        "files": []
+      },
+      "full_config": {
+        "title": "Hacker",
+        "description": "Agent specialized in cyber security and penetration testing.",
+        "context": "Use this agent for cybersecurity tasks such as penetration testing, vulnerability analysis, and security auditing."
+      }
+    },
+    "mdcourse-gen-redesign": {
+      "title": "MD Course Generator (Redesign)",
+      "version": "1.0.0",
+      "path": "/a0/agents/mdcourse-gen-redesign",
+      "description": "Specialized course-generation agent that runs an 8-stage pipeline with strict quality gates, elaboration loops, and recovery for incomplete outputs.",
+      "context_and_usage": "Use this agent to design and package premium markdown course products with deep module content, assessment diversity, multimedia sourcing, strategic marketing, value-based pricing, and production-ready delivery artifacts.",
+      "tools": [],
+      "criteria": [],
+      "sample_usage": "",
+      "prompts": {
+        "count": 13,
+        "files": [
+          {
+            "filename": "agent.system.main.role.md",
+            "size_kb": 0.03,
+            "preview": "{{ include \"system.main.md\" }}\n"
+          },
+          {
+            "filename": "content.standards.md",
+            "size_kb": 0.4,
+            "preview": " \u00d7 N) words\n- [ ] Depth progression validated (each module 10-15% more complex)\n- [ ] All code examples working and annotated\n- [ ] All 5 assessment q..."
+          },
+          {
+            "filename": "override.md",
+            "size_kb": 0.44,
+            "preview": "## Override Rules\n\n- Prefer concise status-first reporting over long narrative.\n- Treat stage quality gates as hard requirements, not guidance.\n- When..."
+          },
+          {
+            "filename": "role.md",
+            "size_kb": 1.52,
+            "preview": "You are MD Course Generator (Redesign), a specialized agent for building production-ready markdown course products.\nYour job is to execute an 8-stage ..."
+          },
+          {
+            "filename": "system.main.md",
+            "size_kb": 7.72,
+            "preview": " All answers include detailed explanations\n- **Quality Gates**: Questions test understanding not just recall, aligned with learning objectives\n- **Nex..."
+          },
+          {
+            "filename": "validation.gates.md",
+            "size_kb": 0.91,
+            "preview": " files, fix scripts, complete checklist before publishing\n\n---\n\n## OVERALL SUCCESS CRITERIA\n\nCourse is \"PRODUCTION READY\" only when ALL 8 stages pass:..."
+          },
+          {
+            "filename": "workflow.assessments.md",
+            "size_kb": 8.05,
+            "preview": "1 Code Challenge\n\nMinimum 9 questions per module. All answers include detailed explanations.\n\n## ASSESSMENT DESIGN PRINCIPLES\n\n### Question Types & Pu..."
+          },
+          {
+            "filename": "workflow.blueprint.md",
+            "size_kb": 3.53,
+            "preview": " scaling (caching, load balancing)\n- Real examples: Netflix, Uber, Twitter\n- Tools: Redis, HAProxy, Kubernetes\n\nPrerequisites: Modules 1-4 (database b..."
+          },
+          {
+            "filename": "workflow.content.md",
+            "size_kb": 1.52,
+            "preview": "## Stage 2: Content Depth Expansion\n\nGenerate each module with full instructional depth and no placeholders.\n\n### Required Structure (per module)\n1. C..."
+          },
+          {
+            "filename": "workflow.delivery.md",
+            "size_kb": 0.3,
+            "preview": "- [ ] All platform-specific packages created and tested\n- [ ] Deployment scripts functional and documented\n- [ ] All files organized and properly stru..."
+          },
+          {
+            "filename": "workflow.marketing.md",
+            "size_kb": 3.21,
+            "preview": "link]\n\n[Case study]\nExample:\n\"CASE STUDY: From Struggle to Confidence\n\nBefore: Alex, Mid-Level Developer\n- Struggled with: System design concepts\n- Tr..."
+          },
+          {
+            "filename": "workflow.multimedia.md",
+            "size_kb": 4.02,
+            "preview": "\n**Option 2: Interactive Calculators**\n- HTML/JS calculator for formulas, conversions\n- Input fields where learner enters values\n- Real-time calculati..."
+          },
+          {
+            "filename": "workflow.pricing.md",
+            "size_kb": 1.56,
+            "preview": " period reasonable (not days for major shift)\n\nPRICING TIERS:\n[ ] 3 tiers defined (Starter, Professional, Premium)\n[ ] Each tier has clear differentia..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 0,
+        "files": []
+      },
+      "full_config": {
+        "name": "mdcourse-gen-redesign",
+        "title": "MD Course Generator (Redesign)",
+        "description": "Specialized course-generation agent that runs an 8-stage pipeline with strict quality gates, elaboration loops, and recovery for incomplete outputs.",
+        "type": "specialized",
+        "version": "1.0.0",
+        "context": "Use this agent to design and package premium markdown course products with deep module content, assessment diversity, multimedia sourcing, strategic marketing, value-based pricing, and production-ready delivery artifacts.",
+        "prompts": {
+          "role": "prompts/agent.system.main.role.md",
+          "override": "prompts/override.md"
+        },
+        "skills": [],
+        "config": {
+          "stages": 8,
+          "quality_gates_required": true
+        }
+      }
+    },
+    "notion-template-generator": {
+      "title": "Notion Template Studio",
+      "version": "N/A",
+      "path": "/a0/agents/notion-template-generator",
+      "description": "Designs premium, niche Notion template packs for marketplaces with production-ready blueprints, build instructions, and listing assets.",
+      "context_and_usage": "Use this agent to create sellable Notion template products for a specific audience, with structured artifacts, quality checks, and clear implementation guidance.",
+      "tools": [],
+      "criteria": [],
+      "sample_usage": "",
+      "prompts": {
+        "count": 6,
+        "files": [
+          {
+            "filename": "agent.system.main.communication.md",
+            "size_kb": 0.47,
+            "preview": "## Communication\nReturn exactly one valid JSON object.\n\n## Required Fields\n- `thoughts`: concise array (`3-5` items) with plan/progress.\n- `headline`:..."
+          },
+          {
+            "filename": "agent.system.main.role.md",
+            "size_kb": 1.95,
+            "preview": "You are **Notion Template Studio**.\nDesign premium Notion template packs for digital marketplaces with strong utility, clear UX, and purchase-ready po..."
+          },
+          {
+            "filename": "agent.system.main.solving.md",
+            "size_kb": 0.9,
+            "preview": "## Problem Solving\nBuild Notion templates as complete digital products, not just structure drafts.\n\n1. Define outcome first\n- Identify target buyer, c..."
+          },
+          {
+            "filename": "agent.system.main.tips.md",
+            "size_kb": 0.81,
+            "preview": "## Tips\n\n### Architecture\n- Keep schemas lean; remove properties that do not drive decisions.\n- Prefer one clear dashboard over deep nested navigation..."
+          },
+          {
+            "filename": "examples.md",
+            "size_kb": 4.81,
+            "preview": "## Example Blueprints (Optional)\nUse these as structure references. Adapt to the user niche and requirements; do not copy verbatim.\n\n### Example 1: Cr..."
+          },
+          {
+            "filename": "testing.md",
+            "size_kb": 0.7,
+            "preview": "## Testing Instructions\n\n### Blueprint Checks\n1. Page tree is coherent and non-redundant.\n2. Every database has explicit properties, views, and intend..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 0,
+        "files": []
+      },
+      "full_config": {
+        "title": "Notion Template Studio",
+        "description": "Designs premium, niche Notion template packs for marketplaces with production-ready blueprints, build instructions, and listing assets.",
+        "context": "Use this agent to create sellable Notion template products for a specific audience, with structured artifacts, quality checks, and clear implementation guidance."
+      }
+    },
+    "pdf-creator": {
+      "title": "Course PDF Creator",
+      "version": "2.0.0",
+      "path": "/a0/agents/pdf-creator",
+      "description": "Converts mdcourse-gen-redesign markdown outputs into polished, sale-ready PDFs with consistent branding and print-first layout.",
+      "context_and_usage": "",
+      "tools": [],
+      "criteria": [],
+      "sample_usage": "",
+      "prompts": {
+        "count": 5,
+        "files": [
+          {
+            "filename": "agent.system.main.communication.md",
+            "size_kb": 0.21,
+            "preview": "Communication guidelines:\n- Report processed input, output PDF path, and metadata used.\n- Report any missing files or conversion errors as hard failur..."
+          },
+          {
+            "filename": "agent.system.main.role.md",
+            "size_kb": 0.02,
+            "preview": "{{ include \"role.md\" }}\n"
+          },
+          {
+            "filename": "agent.system.main.solving.md",
+            "size_kb": 0.32,
+            "preview": "Solving flow for course PDF generation:\n1. Resolve source input (single markdown file or folder).\n2. Build deterministic markdown order and merge cont..."
+          },
+          {
+            "filename": "override.md",
+            "size_kb": 0.25,
+            "preview": "## Override Rules\n\n- Optimize for mdcourse-generated long-form educational content.\n- Use deterministic ordering and output names.\n- Treat missing sou..."
+          },
+          {
+            "filename": "role.md",
+            "size_kb": 1.19,
+            "preview": "You are Course PDF Creator, a specialized production agent for converting `mdcourse-gen-redesign` outputs into polished, sale-ready PDFs.\n\n## Speciali..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 3,
+        "files": [
+          {
+            "filename": "build_sale_ready_pdf.sh",
+            "size_kb": 4.8,
+            "is_executable": false
+          },
+          {
+            "filename": "convert_markdown_to_pdf.sh",
+            "size_kb": 0.17,
+            "is_executable": true
+          },
+          {
+            "filename": "echo_demo.sh",
+            "size_kb": 0.12,
+            "is_executable": true
+          }
+        ]
+      },
+      "full_config": {
+        "name": "pdf-creator",
+        "title": "Course PDF Creator",
+        "description": "Converts mdcourse-gen-redesign markdown outputs into polished, sale-ready PDFs with consistent branding and print-first layout.",
+        "type": "specialized",
+        "version": "2.0.0",
+        "prompts": {
+          "role": "prompts/role.md",
+          "override": "prompts/override.md"
+        },
+        "skills": [],
+        "config": {
+          "input_root": "inputs/",
+          "output_root": "outputs/",
+          "default_script": "scripts/build_sale_ready_pdf.sh",
+          "default_style": "styles/mdcourse_preamble.tex",
+          "toc": true,
+          "number_sections": true
+        }
+      }
+    },
+    "platform-publisher": {
+      "title": "Platform Publisher",
+      "version": "1.0.0",
+      "path": "/a0/agents/platform-publisher",
+      "description": "Optimizes and publishes videos to YouTube, TikTok, Instagram Reels, Twitter",
+      "context_and_usage": "",
+      "tools": [
+        "browser_agent",
+        "code_execution_tool"
+      ],
+      "criteria": [],
+      "sample_usage": "",
+      "prompts": {
+        "count": 2,
+        "files": [
+          {
+            "filename": "override.md",
+            "size_kb": 0.45,
+            "preview": "# Platform Publisher Behavioral Override\n\n## Tool Preferences\n- **browser_agent**: Native platform publishing (OAuth login)\n- **code_execution_tool**:..."
+          },
+          {
+            "filename": "role.md",
+            "size_kb": 1.07,
+            "preview": "# Platform Publisher Agent\n\nYou optimize and publish video content across 4 major platforms: YouTube, TikTok, Instagram Reels, Twitter.\n\n## Specializa..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 0,
+        "files": []
+      },
+      "full_config": {
+        "name": "platform-publisher",
+        "title": "Platform Publisher",
+        "description": "Optimizes and publishes videos to YouTube, TikTok, Instagram Reels, Twitter",
+        "version": "1.0.0",
+        "type": "specialized",
+        "prompts": {
+          "role": "prompts/role.md",
+          "override": "prompts/override.md"
+        },
+        "tools": [
+          "browser_agent",
+          "code_execution_tool"
+        ],
+        "skills": [],
+        "config": {
+          "platforms": [
+            "youtube",
+            "tiktok",
+            "instagram",
+            "twitter"
+          ],
+          "formats": {
+            "youtube": "1080p MP4",
+            "tiktok": "vertical 1080x1920",
+            "instagram": "square 1080x1080",
+            "twitter": "16:9 1080x720"
+          }
+        }
+      }
+    },
+    "prompt-evaluator": {
+      "title": "Critical Prompt Evaluator",
+      "version": "N/A",
+      "path": "/a0/agents/prompt-evaluator",
+      "description": "Agent specialized in critically evaluating and improving LLM prompts.",
+      "context_and_usage": "Use this agent to rigorously assess prompts for clarity, biases, effectiveness, logical flaws, and generate optimized alternatives.",
+      "tools": [],
+      "criteria": [],
+      "sample_usage": "",
+      "prompts": {
+        "count": 1,
+        "files": [
+          {
+            "filename": "main.role.md",
+            "size_kb": 2.55,
+            "preview": "You are the **Critical Prompt Evaluator**, a ruthless expert in prompt engineering with years of experience optimizing LLM interactions.\n\n## Your Expe..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 0,
+        "files": []
+      },
+      "full_config": {
+        "title": "Critical Prompt Evaluator",
+        "description": "Agent specialized in critically evaluating and improving LLM prompts.",
+        "context": "Use this agent to rigorously assess prompts for clarity, biases, effectiveness, logical flaws, and generate optimized alternatives."
+      }
+    },
+    "prompt-packer": {
+      "title": "Prompt Pack Studio",
+      "version": "N/A",
+      "path": "/a0/agents/prompt-packer",
+      "description": "Builds premium niche prompt-template packs for marketplaces, with strict compliance guardrails, standardized prompt structure, and production-ready listing assets.",
+      "context_and_usage": "Use this agent to produce sellable prompt packs for a defined niche: prompt files, evaluation notes, usage guidance, and marketplace copy, all validated against a consistent quality gate.",
+      "tools": [],
+      "criteria": [],
+      "sample_usage": "",
+      "prompts": {
+        "count": 5,
+        "files": [
+          {
+            "filename": "agent.system.main.communication.md",
+            "size_kb": 0.46,
+            "preview": "## Communication\nReturn exactly one valid JSON object.\n\n## Required Fields\n- `thoughts`: concise array (`3-5` items) with planning/progress notes.\n- `..."
+          },
+          {
+            "filename": "agent.system.main.role.md",
+            "size_kb": 1.63,
+            "preview": "You are **Prompt Pack Studio**.\nCreate premium niche prompt packs for digital marketplaces with high utility, clear differentiation, and consistent qu..."
+          },
+          {
+            "filename": "agent.system.main.solving.md",
+            "size_kb": 0.93,
+            "preview": "## Problem Solving\nBuild prompt packs that are sellable, compliant, and easy to validate.\n\n1. Plan briefly\n- Define niche, buyer outcome, and pack sco..."
+          },
+          {
+            "filename": "agent.system.main.tips.md",
+            "size_kb": 0.73,
+            "preview": "## Tips\n\n### Prompt Design\n- Depth over breadth: solve one buyer workflow per prompt.\n- Keep language concrete, testable, and reusable.\n- Mix style an..."
+          },
+          {
+            "filename": "testing.md",
+            "size_kb": 0.79,
+            "preview": "## Testing Instructions\n\n### Per-Prompt Checks\n1. Compliance: verify PII redaction and public-ethics constraints.\n2. Structure: master-template elemen..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 0,
+        "files": []
+      },
+      "full_config": {
+        "title": "Prompt Pack Studio",
+        "description": "Builds premium niche prompt-template packs for marketplaces, with strict compliance guardrails, standardized prompt structure, and production-ready listing assets.",
+        "context": "Use this agent to produce sellable prompt packs for a defined niche: prompt files, evaluation notes, usage guidance, and marketplace copy, all validated against a consistent quality gate."
+      }
+    },
+    "researcher": {
+      "title": "Researcher",
+      "version": "1.1.0",
+      "path": "/a0/agents/researcher",
+      "description": "Specialized agent for structured research, evidence synthesis, and decision-ready reporting.",
+      "context_and_usage": "",
+      "tools": [],
+      "criteria": [],
+      "sample_usage": "",
+      "prompts": {
+        "count": 3,
+        "files": [
+          {
+            "filename": "agent.system.main.communication.md",
+            "size_kb": 0.63,
+            "preview": "## Communication\n\n### Clarification\nAsk clarifying questions only when missing details would significantly affect findings or recommendations.\nIf a re..."
+          },
+          {
+            "filename": "agent.system.main.role.md",
+            "size_kb": 0.97,
+            "preview": "## Your Role\n\nYou are Researcher, a specialist for deep but practical research.\nYour objective is to produce reliable, decision-ready analysis with tr..."
+          },
+          {
+            "filename": "override.md",
+            "size_kb": 0.18,
+            "preview": "## Override Rules\n\n- Default to concise, structured reporting.\n- Ask only essential clarifying questions.\n- Prefer primary or authoritative sources.\n-..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 0,
+        "files": []
+      },
+      "full_config": {
+        "name": "researcher",
+        "title": "Researcher",
+        "description": "Specialized agent for structured research, evidence synthesis, and decision-ready reporting.",
+        "type": "specialized",
+        "version": "1.1.0",
+        "prompts": {
+          "role": "prompts/agent.system.main.role.md",
+          "override": "prompts/override.md"
+        },
+        "skills": [],
+        "config": {
+          "default_depth": "balanced",
+          "require_sources": true,
+          "report_confidence": true
+        }
+      }
+    },
+    "script-writer": {
+      "title": "Video Script Agent",
+      "version": "1.0.0",
+      "path": "/a0/agents/script-writer",
+      "description": "Generates YouTube/TikTok scripts optimized for retention, hooks, CTAs. Outputs structured JSON + markdown.",
+      "context_and_usage": "",
+      "tools": [
+        "document_query",
+        "search_engine",
+        "code_execution_tool"
+      ],
+      "criteria": [],
+      "sample_usage": "",
+      "prompts": {
+        "count": 2,
+        "files": [
+          {
+            "filename": "override.md",
+            "size_kb": 1.07,
+            "preview": "# Framework Overrides\n\n## TOOL PREFERENCES (priority order)\n1. **document_query**: Competitor analysis, case studies, audience research\n2. **search_en..."
+          },
+          {
+            "filename": "role.md",
+            "size_kb": 1.64,
+            "preview": "# Video Script Agent\n\nYou generate **production-ready YouTube/TikTok scripts** optimized for **maximum retention** and **conversion**.\n\n## CORE EXPERT..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 0,
+        "files": []
+      },
+      "full_config": {
+        "name": "script-writer",
+        "title": "Video Script Agent",
+        "description": "Generates YouTube/TikTok scripts optimized for retention, hooks, CTAs. Outputs structured JSON + markdown.",
+        "type": "specialized",
+        "version": "1.0.0",
+        "tools": [
+          "document_query",
+          "search_engine",
+          "code_execution_tool"
+        ],
+        "prompts": {
+          "role": "prompts/role.md",
+          "override": "prompts/override.md"
+        },
+        "config": {
+          "output_format": "json+markdown",
+          "platforms": [
+            "youtube",
+            "tiktok"
+          ]
+        }
+      }
+    },
+    "visuals-hybrid": {
+      "title": "Visuals Hybrid",
+      "version": "1.0.0",
+      "path": "/a0/agents/visuals-hybrid",
+      "description": "Video Visuals Agent for production pipelines. Hybrid workflow: image-fetcher (royalty-free B-roll) primary + local-image-gen (Stable Diffusion) fallback with quality validation.",
+      "context_and_usage": "Use this agent for video production visuals: script-matched B-roll, thumbnails, overlays, social formats. Outputs organized /a0/usr/workdir/ folders with licensing metadata.",
+      "tools": [],
+      "criteria": [],
+      "sample_usage": "",
+      "prompts": {
+        "count": 103,
+        "files": [
+          {
+            "filename": "agent.context.extras.md",
+            "size_kb": 0.02,
+            "preview": "[EXTRAS]\n{{extras}}"
+          },
+          {
+            "filename": "agent.extras.agent_info.md",
+            "size_kb": 0.07,
+            "preview": "# Agent info\nAgent Number: {{number}}\nProfile: {{profile}}\nLLM: {{llm}}"
+          },
+          {
+            "filename": "agent.extras.workdir_structure.md",
+            "size_kb": 0.2,
+            "preview": "# File structure of working directory {{folder}}\n- this is filtered overview not full scan\n- list yourself if needed\n- maximum depth: {{max_depth}}\n- ..."
+          },
+          {
+            "filename": "agent.system.behaviour.md",
+            "size_kb": 0.03,
+            "preview": "# Behavioral rules\n!!! {{rules}}"
+          },
+          {
+            "filename": "agent.system.behaviour_default.md",
+            "size_kb": 0.07,
+            "preview": "- favor linux commands for simple tasks where possible instead of python\n"
+          },
+          {
+            "filename": "agent.system.datetime.md",
+            "size_kb": 0.11,
+            "preview": "# Current system date and time of user\n- current datetime: {{date_time}}\n- rely on this info always up to date\n"
+          },
+          {
+            "filename": "agent.system.main.communication.md",
+            "size_kb": 0.69,
+            "preview": "\n## Communication\nrespond valid json with fields\n\n### Response format (json fields names)\n- thoughts: array thoughts before execution in natural langu..."
+          },
+          {
+            "filename": "agent.system.main.communication_additions.md",
+            "size_kb": 1.09,
+            "preview": "## Receiving messages\nuser messages contain superior instructions, tool results, framework messages\nif starts (voice) then transcribed can contain err..."
+          },
+          {
+            "filename": "agent.system.main.environment.md",
+            "size_kb": 0.17,
+            "preview": "## Environment\nlive in kali linux docker container use debian kali packages\nagent zero framework is python project in /a0 folder\nlinux fully root acce..."
+          },
+          {
+            "filename": "agent.system.main.md",
+            "size_kb": 0.25,
+            "preview": "# Agent Zero System Manual\n\n{{ include \"agent.system.main.role.md\" }}\n\n{{ include \"agent.system.main.environment.md\" }}\n\n{{ include \"agent.system.main..."
+          },
+          {
+            "filename": "agent.system.main.role.md",
+            "size_kb": 1.67,
+            "preview": "You are **Visuals Hybrid**, a production-grade video visuals specialist using a hybrid royalty-free + generative workflow.\n\n## HYBRID WORKFLOW (ALWAYS..."
+          },
+          {
+            "filename": "agent.system.main.solving.md",
+            "size_kb": 0.67,
+            "preview": "## Problem solving\n\nnot for simple questions only tasks needing solving\nexplain each step in thoughts\n\n0 outline plan\nagentic mode active\n\n1 check mem..."
+          },
+          {
+            "filename": "agent.system.main.tips.md",
+            "size_kb": 0.64,
+            "preview": "\n## General operation manual\n\nreason step-by-step execute tasks\navoid repetition ensure progress\nnever assume success\nmemory refers memory tools not o..."
+          },
+          {
+            "filename": "agent.system.mcp_tools.md",
+            "size_kb": 0.01,
+            "preview": "{{tools}}\n"
+          },
+          {
+            "filename": "agent.system.memories.md",
+            "size_kb": 0.13,
+            "preview": "# Memories on the topic\n- following are memories about current topic\n- do not overly rely on them they might not be relevant\n\n{{memories}}"
+          },
+          {
+            "filename": "agent.system.projects.active.md",
+            "size_kb": 0.42,
+            "preview": "## Active project\nPath: {{project_path}}\nTitle: {{project_name}}\nDescription: {{project_description}}\n{% if project_git_url %}Git URL: {{project_git_u..."
+          },
+          {
+            "filename": "agent.system.projects.inactive.md",
+            "size_kb": 0.03,
+            "preview": "no project currently activated"
+          },
+          {
+            "filename": "agent.system.projects.main.md",
+            "size_kb": 0.27,
+            "preview": "# Projects\n- user can create and activate projects\n- projects have work folder in /usr/projects/<name> and instructions and config in /usr/projects/<n..."
+          },
+          {
+            "filename": "agent.system.response_tool_tips.md",
+            "size_kb": 0.19,
+            "preview": "**tips**\nALWAYS remember to use `\u00a7\u00a7include(<path>)` replacement to include previous tool results\nrewriting text is slow and expensive, include when po..."
+          },
+          {
+            "filename": "agent.system.secrets.md",
+            "size_kb": 0.59,
+            "preview": "# Secret Placeholders\n- user secrets are masked and used as aliases\n- use aliases in tool calls they will be automatically replaced with actual values..."
+          },
+          {
+            "filename": "agent.system.skills.image_fetcher.md",
+            "size_kb": 0.42,
+            "preview": "**image-fetcher SKILL** - PRIMARY B-ROLL SOURCE\n\nLoad: skills_tool:load skill_name=\"image-fetcher\"\n\nUSAGE:\n1. Query script context + scene description..."
+          },
+          {
+            "filename": "agent.system.skills.loaded.md",
+            "size_kb": 0.09,
+            "preview": "# loaded skills\n- the following skills were explicitly loaded via skills_tool\n\n{{skills}}\n"
+          },
+          {
+            "filename": "agent.system.skills.local_image_gen.md",
+            "size_kb": 0.46,
+            "preview": "**local-image-gen SKILL** - CUSTOM ASSETS FALLBACK\n\nLoad: skills_tool:load skill_name=\"local-image-gen\"\n\nWHEN TO USE:\n- No suitable royalty-free B-rol..."
+          },
+          {
+            "filename": "agent.system.skills.md",
+            "size_kb": 0.13,
+            "preview": "# Available skills \n- skills in \"**name** description\" format \n- use skills_tool to load with **skill_name** when relevant\n\n\n{{skills}}\n"
+          },
+          {
+            "filename": "agent.system.solutions.md",
+            "size_kb": 0.16,
+            "preview": "# Solutions from the past\n- following are memories about successful solutions of related problems\n- do not overly rely on them they might not be relev..."
+          },
+          {
+            "filename": "agent.system.tool.a2a_chat.md",
+            "size_kb": 2.37,
+            "preview": "### a2a_chat:\nThis tool lets Agent Zero chat with any other FastA2A-compatible agent.\nIt automatically keeps conversation **context** (so each subsequ..."
+          },
+          {
+            "filename": "agent.system.tool.behaviour.md",
+            "size_kb": 0.34,
+            "preview": "### behaviour_adjustment:\nupdate agent behaviour per user request\nwrite instructions to add or remove to adjustments arg\nusage:\n~~~json\n{\n    \"thought..."
+          },
+          {
+            "filename": "agent.system.tool.browser.md",
+            "size_kb": 0.94,
+            "preview": "### browser_agent:\n\nsubordinate agent controls playwright browser\nmessage argument talks to agent give clear instructions credentials task based\nreset..."
+          },
+          {
+            "filename": "agent.system.tool.call_sub.md",
+            "size_kb": 1.07,
+            "preview": "{{if agent_profiles}}\n### call_subordinate\n\nyou can use subordinates for subtasks\nsubordinates can be scientist coder engineer etc\nmessage field: alwa..."
+          },
+          {
+            "filename": "agent.system.tool.code_exe.md",
+            "size_kb": 2.3,
+            "preview": "### code_execution_tool\n\nexecute terminal commands python nodejs code for computation or software tasks\nplace code in \"code\" arg; escape carefully and..."
+          },
+          {
+            "filename": "agent.system.tool.document_query.md",
+            "size_kb": 1.35,
+            "preview": "### document_query\nread and analyze remote/local documents get text content or answer questions\npass a single url/path or a list for multiple document..."
+          },
+          {
+            "filename": "agent.system.tool.input.md",
+            "size_kb": 0.38,
+            "preview": "### input:\nuse keyboard arg for terminal program input\nuse session arg for terminal session number\nanswer dialogues enter passwords etc\nnot for browse..."
+          },
+          {
+            "filename": "agent.system.tool.memory.md",
+            "size_kb": 1.84,
+            "preview": "## Memory management tools:\nmanage long term memories\nnever refuse search memorize load personal info all belongs to user\n\n### memory_load\nload memori..."
+          },
+          {
+            "filename": "agent.system.tool.notify_user.md",
+            "size_kb": 1.42,
+            "preview": "### notify_user:\nThis tool can be used to notify the user of a message independent of the current task.\n\n!!! This is a universal notification tool\n!!!..."
+          },
+          {
+            "filename": "agent.system.tool.response.md",
+            "size_kb": 0.36,
+            "preview": "### response:\nfinal answer to user\nends task processing use only when done or no task active\nput result in text arg\nusage:\n~~~json\n{\n    \"thoughts\": [..."
+          },
+          {
+            "filename": "agent.system.tool.scheduler.md",
+            "size_kb": 10.9,
+            "preview": "## Task Scheduler Subsystem:\nThe task scheduler is a part of agent-zero enabling the system to execute\narbitrary tasks defined by a \"system prompt\" an..."
+          },
+          {
+            "filename": "agent.system.tool.search_engine.md",
+            "size_kb": 0.3,
+            "preview": "### search_engine:\nprovide query arg get search results\nreturns list urls titles descriptions\n**Example usage**:\n~~~json\n{\n    \"thoughts\": [\n        \"..."
+          },
+          {
+            "filename": "agent.system.tool.skills.md",
+            "size_kb": 2.1,
+            "preview": "### skills_tool\n\n#### overview\n\nskills are folders with instructions scripts files\ngive agent extra capabilities\nagentskills.io standard\n\n#### workflo..."
+          },
+          {
+            "filename": "agent.system.tool.wait.md",
+            "size_kb": 0.57,
+            "preview": "### wait\npause execution for a set time or until a timestamp\nuse args \"seconds\" \"minutes\" \"hours\" \"days\" for duration\nuse \"until\" with ISO timestamp f..."
+          },
+          {
+            "filename": "agent.system.tools.md",
+            "size_kb": 0.03,
+            "preview": "## Tools available:\n\n{{tools}}"
+          },
+          {
+            "filename": "agent.system.tools_vision.md",
+            "size_kb": 0.43,
+            "preview": "## \"Multimodal (Vision) Agent Tools\" available:\n\n### vision_load:\nload image data to LLM\nuse paths arg for attachments\nmultiple images if needed\nonly ..."
+          },
+          {
+            "filename": "agent.user.main.goal.md",
+            "size_kb": 0.39,
+            "preview": "# Visuals Hybrid Mission\n\n**Transform script context into production-ready video visuals** using hybrid royalty-free + generative workflow.\n\n## DELIVE..."
+          },
+          {
+            "filename": "agent.user.task_visuals.md",
+            "size_kb": 0.5,
+            "preview": "**VISUALS TASK WORKFLOW**\n\n1. ANALYZE script-writer JSON + user specs\n2. MAP scenes/timing to visual requirements\n3. PRIORITY: image-fetcher for B-rol..."
+          },
+          {
+            "filename": "behaviour.merge.msg.md",
+            "size_kb": 0.06,
+            "preview": "# Current ruleset\n{{current_rules}}\n\n# Adjustments\n{{adjustments}}"
+          },
+          {
+            "filename": "behaviour.merge.sys.md",
+            "size_kb": 0.49,
+            "preview": "# Assistant's job\n1. The assistant receives a markdown ruleset of AGENT's behaviour and text of adjustments to be implemented\n2. Assistant merges the ..."
+          },
+          {
+            "filename": "behaviour.search.sys.md",
+            "size_kb": 0.76,
+            "preview": "# Assistant's job\n1. The assistant receives a history of conversation between USER and AGENT\n2. Assistant searches for USER's commands to update AGENT..."
+          },
+          {
+            "filename": "behaviour.updated.md",
+            "size_kb": 0.03,
+            "preview": "Behaviour has been updated."
+          },
+          {
+            "filename": "browser_agent.system.md",
+            "size_kb": 1.33,
+            "preview": "# Operation instruction\nKeep your tasks solution as simple and straight forward as possible\nFollow instructions as closely as possible\nWhen told go to..."
+          },
+          {
+            "filename": "fw.ai_response.md",
+            "size_kb": 0.01,
+            "preview": "{{message}}"
+          },
+          {
+            "filename": "fw.bulk_summary.msg.md",
+            "size_kb": 0.04,
+            "preview": "# Message history to summarize:\n{{content}}"
+          },
+          {
+            "filename": "fw.bulk_summary.sys.md",
+            "size_kb": 0.44,
+            "preview": "# AI role\nYou are AI summarization assistant\nYou are provided with a conversation history and your goal is to provide a short summary of the conversat..."
+          },
+          {
+            "filename": "fw.code.info.md",
+            "size_kb": 0.02,
+            "preview": "[SYSTEM: {{info}}] "
+          },
+          {
+            "filename": "fw.code.max_time.md",
+            "size_kb": 0.19,
+            "preview": "Returning control to agent after {{timeout}} seconds of execution. Process might be still running. Check previous outputs and decide whether to reset ..."
+          },
+          {
+            "filename": "fw.code.no_out_time.md",
+            "size_kb": 0.19,
+            "preview": "Returning control to agent after {{timeout}} seconds with no output. Process might be still running. Check previous outputs and decide whether to rese..."
+          },
+          {
+            "filename": "fw.code.no_output.md",
+            "size_kb": 0.08,
+            "preview": "No output returned. Consider resetting the terminal or using another session."
+          },
+          {
+            "filename": "fw.code.pause_dialog.md",
+            "size_kb": 0.24,
+            "preview": "Potential dialog detected in output. Returning control to agent after {{timeout}} seconds since last output update. Decide whether dialog actually occ..."
+          },
+          {
+            "filename": "fw.code.pause_time.md",
+            "size_kb": 0.2,
+            "preview": "Returning control to agent after {{timeout}} seconds since last output update. Process might be still running. Check previous outputs and decide wheth..."
+          },
+          {
+            "filename": "fw.code.reset.md",
+            "size_kb": 0.03,
+            "preview": "Terminal session has been reset."
+          },
+          {
+            "filename": "fw.code.running.md",
+            "size_kb": 0.15,
+            "preview": "Terminal session {{session}} might be still running. Check previous outputs and decide whether to reset and continue or wait for more output is needed..."
+          },
+          {
+            "filename": "fw.code.runtime_wrong.md",
+            "size_kb": 0.15,
+            "preview": "~~~json\n{\n    \"system_warning\": \"The runtime '{{runtime}}' is not supported, available options are 'terminal', 'python', 'nodejs' and 'output'.\"\n}\n~~~"
+          },
+          {
+            "filename": "fw.document_query.optmimize_query.md",
+            "size_kb": 0.96,
+            "preview": "# AI role\n- You are an AI assistant being part of a larger RAG system based on vector similarity search\n- Your job is to take a human written question..."
+          },
+          {
+            "filename": "fw.document_query.system_prompt.md",
+            "size_kb": 0.58,
+            "preview": "You are an AI assistant who can answer questions about a given document text.\nThe assistant is part of a larger application that is used to answer que..."
+          },
+          {
+            "filename": "fw.error.md",
+            "size_kb": 0.05,
+            "preview": "~~~json\n{\n    \"system_error\": \"{{error}}\"\n}\n~~~"
+          },
+          {
+            "filename": "fw.hint.call_sub.md",
+            "size_kb": 0.06,
+            "preview": "do not rewrite long responses, use \u00a7\u00a7include(<file>) instead!"
+          },
+          {
+            "filename": "fw.initial_message.md",
+            "size_kb": 0.54,
+            "preview": "```json\n{\n    \"thoughts\": [\n        \"This is a new conversation, I should greet the user warmly and let them know I'm ready to help.\",\n        \"I'll u..."
+          },
+          {
+            "filename": "fw.intervention.md",
+            "size_kb": 0.12,
+            "preview": "```json\n{\n  \"system_message\": {{system_message}},\n  \"user_intervention\": {{message}},\n  \"attachments\": {{attachments}}\n}\n```\n"
+          },
+          {
+            "filename": "fw.knowledge_tool.response.md",
+            "size_kb": 0.05,
+            "preview": "# Online sources\n{{online_sources}}\n\n# Memory\n{{memory}}"
+          },
+          {
+            "filename": "fw.memories_deleted.md",
+            "size_kb": 0.06,
+            "preview": "~~~json\n{\n    \"memories_deleted\": \"{{memory_count}}\"\n}\n~~~"
+          },
+          {
+            "filename": "fw.memories_not_found.md",
+            "size_kb": 0.08,
+            "preview": "~~~json\n{\n    \"memory\": \"No memories found for specified query: {{query}}\"\n}\n~~~"
+          },
+          {
+            "filename": "fw.memory.hist_suc.sys.md",
+            "size_kb": 1.14,
+            "preview": "# Assistant's job\n1. The assistant receives a history of conversation between USER and AGENT\n2. Assistant searches for succesful technical solutions b..."
+          },
+          {
+            "filename": "fw.memory.hist_sum.sys.md",
+            "size_kb": 1.0,
+            "preview": "# Assistant's job\n1. The assistant receives a history of conversation between USER and AGENT\n2. Assistant writes a summary that will serve as a search..."
+          },
+          {
+            "filename": "fw.memory_saved.md",
+            "size_kb": 0.03,
+            "preview": "Memory saved with id {{memory_id}}"
+          },
+          {
+            "filename": "fw.msg_cleanup.md",
+            "size_kb": 0.41,
+            "preview": "# Provide a JSON summary of given messages\n- From the messages you are given, write a summary of key points in the conversation.\n- Include important a..."
+          },
+          {
+            "filename": "fw.msg_critical_error.md",
+            "size_kb": 0.09,
+            "preview": "This error has occurred: {{error_message}}. Proceed with your original task if possible."
+          },
+          {
+            "filename": "fw.msg_from_subordinate.md",
+            "size_kb": 0.04,
+            "preview": "Message from subordinate {{name}}: {{message}}"
+          },
+          {
+            "filename": "fw.msg_misformat.md",
+            "size_kb": 0.1,
+            "preview": "You have misformatted your message. Follow system prompt instructions on JSON message formatting precisely."
+          },
+          {
+            "filename": "fw.msg_nudge.md",
+            "size_kb": 0.05,
+            "preview": "```json\n{\n  \"system_message\": \"Nudged - continue\",\n}\n```"
+          },
+          {
+            "filename": "fw.msg_repeat.md",
+            "size_kb": 0.07,
+            "preview": "You have sent the same message again. You have to do something else!"
+          },
+          {
+            "filename": "fw.msg_summary.md",
+            "size_kb": 0.05,
+            "preview": "```json\n{\n  \"messages_summary\": {{summary}}\n}\n```\n"
+          },
+          {
+            "filename": "fw.msg_timeout.md",
+            "size_kb": 0.48,
+            "preview": "# User is not responding to your message.\nIf you have a task in progress, continue on your own.\nI you don't have a task, use the **task_done** tool wi..."
+          },
+          {
+            "filename": "fw.msg_truncated.md",
+            "size_kb": 0.05,
+            "preview": "<<\n{{length}} CHARACTERS REMOVED TO SAVE SPACE\n>>"
+          },
+          {
+            "filename": "fw.notify_user.notification_sent.md",
+            "size_kb": 0.04,
+            "preview": "The notification has been sent to the user.\n"
+          },
+          {
+            "filename": "fw.rename_chat.msg.md",
+            "size_kb": 0.12,
+            "preview": "# Instruction\n- provide a chat name for the following\n\n# Current chat name\n{{current_name}}\n\n# Chat history\n{{history}}\n"
+          },
+          {
+            "filename": "fw.rename_chat.sys.md",
+            "size_kb": 0.65,
+            "preview": "# AI role\n- You are a chat naming assistant\n- Your role is to suggest a short chat name for the current conversation\n\n# Input\n- You are given the curr..."
+          },
+          {
+            "filename": "fw.tool_not_found.md",
+            "size_kb": 0.06,
+            "preview": "Tool {{tool_name}} not found. Available tools: \\n{{tools_prompt}}"
+          },
+          {
+            "filename": "fw.tool_result.md",
+            "size_kb": 0.08,
+            "preview": "```json\n{\n    \"tool_name\": {{tool_name}},\n    \"tool_result\": {{tool_result}}\n}\n```\n"
+          },
+          {
+            "filename": "fw.topic_summary.msg.md",
+            "size_kb": 0.04,
+            "preview": "# Message history to summarize:\n{{content}}"
+          },
+          {
+            "filename": "fw.topic_summary.sys.md",
+            "size_kb": 0.53,
+            "preview": "# AI role\nYou are AI summarization assistant\nYou are provided with a conversation history and your goal is to provide a short summary of the conversat..."
+          },
+          {
+            "filename": "fw.user_message.md",
+            "size_kb": 0.12,
+            "preview": "```json\n{\n  \"system_message\": {{system_message}},\n  \"user_message\": {{message}},\n  \"attachments\": {{attachments}}\n}\n```\n"
+          },
+          {
+            "filename": "fw.wait_complete.md",
+            "size_kb": 0.04,
+            "preview": "Wait complete. Reached {{target_time}}."
+          },
+          {
+            "filename": "fw.warning.md",
+            "size_kb": 0.05,
+            "preview": "~~~json\n{\n  \"system_warning\": {{message}}\n}\n~~~\n"
+          },
+          {
+            "filename": "memory.consolidation.msg.md",
+            "size_kb": 0.28,
+            "preview": "Process the consolidation for this scenario: \n\n# Memory Context\n\n**Memory Area**: {{area}}\n**Current Timestamp**: {{current_timestamp}}\n\n**New Memory ..."
+          },
+          {
+            "filename": "memory.consolidation.sys.md",
+            "size_kb": 6.06,
+            "preview": "# Memory Consolidation Analysis System\n\nYou are an intelligent memory consolidation specialist for the Agent Zero memory management system. Your role ..."
+          },
+          {
+            "filename": "memory.keyword_extraction.msg.md",
+            "size_kb": 0.12,
+            "preview": "Now analyze the provided memory content and extract relevant search keywords:\n\n**Memory Content:**\n{{memory_content}}\n"
+          },
+          {
+            "filename": "memory.keyword_extraction.sys.md",
+            "size_kb": 2.03,
+            "preview": "# Memory Keyword Extraction System\n\nYou are a specialized keyword extraction system for the Agent Zero memory management. Your task is to analyze memo..."
+          },
+          {
+            "filename": "memory.memories_filter.msg.md",
+            "size_kb": 0.21,
+            "preview": "# Provide array of indices of relevant memories and solutions in relation to user message and history:\n\n## Memories and solutions:\n{{memories}}\n\n## Us..."
+          },
+          {
+            "filename": "memory.memories_filter.sys.md",
+            "size_kb": 1.46,
+            "preview": "# AI's job\n1. The AI receives enumerated list of MEMORIES, a MESSAGE from USER and short conversation HISTORY for context\n2. AI analyzes the relations..."
+          },
+          {
+            "filename": "memory.memories_query.msg.md",
+            "size_kb": 0.12,
+            "preview": "# Provide search query for the following:\n\n## User message:\n{{message}}\n\n## Conversation history for context:\n{{history}}\n"
+          },
+          {
+            "filename": "memory.memories_query.sys.md",
+            "size_kb": 0.88,
+            "preview": "# AI's job\n1. The AI receives a MESSAGE from USER and short conversation HISTORY for reference\n2. AI analyzes the MESSAGE and HISTORY for CONTEXT\n3. A..."
+          },
+          {
+            "filename": "memory.memories_sum.sys.md",
+            "size_kb": 2.44,
+            "preview": "# Assistant's job\n1. The assistant receives a HISTORY of conversation between USER and AGENT\n2. Assistant searches for relevant information from the H..."
+          },
+          {
+            "filename": "memory.recall_delay_msg.md",
+            "size_kb": 0.15,
+            "preview": "Info: auto memory recall set to delayed mode. auto memories will be available after next message. if manual memory check is required use memory tools."
+          },
+          {
+            "filename": "memory.solutions_query.sys.md",
+            "size_kb": 0.58,
+            "preview": "# AI's job\n1. The AI receives a MESSAGE from USER and short conversation HISTORY for reference\n2. AI analyzes the intention of the USER based on MESSA..."
+          },
+          {
+            "filename": "memory.solutions_sum.sys.md",
+            "size_kb": 2.27,
+            "preview": "# Assistant's job\n1. The assistant receives a history of conversation between USER and AGENT\n2. Assistant searches for succesful technical solutions b..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 0,
+        "files": []
+      },
+      "full_config": {
+        "title": "Visuals Hybrid",
+        "description": "Video Visuals Agent for production pipelines. Hybrid workflow: image-fetcher (royalty-free B-roll) primary + local-image-gen (Stable Diffusion) fallback with quality validation.",
+        "context": "Use this agent for video production visuals: script-matched B-roll, thumbnails, overlays, social formats. Outputs organized /a0/usr/workdir/ folders with licensing metadata.",
+        "version": "1.0.0"
+      }
+    },
+    "voice-ai": {
+      "title": "Voiceover Agent",
+      "version": "1.0.0",
+      "path": "/a0/agents/voice-ai",
+      "description": "Generates natural TTS voiceovers with emotion, pacing control. Consumes script-writer JSON output.",
+      "context_and_usage": "",
+      "tools": [
+        "code_execution_tool",
+        "skills_tool"
+      ],
+      "criteria": [],
+      "sample_usage": "",
+      "prompts": {
+        "count": 2,
+        "files": [
+          {
+            "filename": "override.md",
+            "size_kb": 8.14,
+            "preview": "# Framework Overrides - REMEDIATED\n\n## TTS ENGINE PRIORITIES (CLOUD/LOCAL HYBRID)\n```\n1. elevenlabs: Cloud TTS with premium quality (if API configured..."
+          },
+          {
+            "filename": "role.md",
+            "size_kb": 1.69,
+            "preview": "# Voiceover Agent\n\nYou generate **production-ready TTS voiceovers** from script-writer JSON output.\n\n## CORE SPECIALIZATION\n**Emotion mapping**: enthu..."
+          }
+        ]
+      },
+      "scripts": {
+        "count": 3,
+        "files": [
+          {
+            "filename": "audio_quality_gate.sh",
+            "size_kb": 5.89,
+            "is_executable": true
+          },
+          {
+            "filename": "regenerate_voiceovers.sh",
+            "size_kb": 7.37,
+            "is_executable": true
+          },
+          {
+            "filename": "tts_elevenlabs.sh",
+            "size_kb": 3.56,
+            "is_executable": true
+          }
+        ]
+      },
+      "full_config": {
+        "name": "voice-ai",
+        "title": "Voiceover Agent",
+        "description": "Generates natural TTS voiceovers with emotion, pacing control. Consumes script-writer JSON output.",
+        "type": "specialized",
+        "version": "1.0.0",
+        "tools": [
+          "code_execution_tool",
+          "skills_tool"
+        ],
+        "prompts": {
+          "role": "prompts/role.md",
+          "override": "prompts/override.md"
+        },
+        "config": {
+          "input_format": "script-writer-json",
+          "output_format": "mp3|wav",
+          "output_path": "/a0/tmp/audio/video-prod/",
+          "voice_engines": [
+            "elevenlabs",
+            "espeak",
+            "piper",
+            "coqui"
+          ],
+          "sample_rate": 22050
+        }
+      }
+    }
+  }
+}

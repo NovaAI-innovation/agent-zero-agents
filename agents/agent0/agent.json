@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "agent0",
   "title": "Agent 0",
   "description": "Primary orchestrator agent that collaborates directly with the user, executes tasks, and delegates to specialists when useful.",

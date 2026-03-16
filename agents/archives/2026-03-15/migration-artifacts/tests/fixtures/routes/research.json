@@ -1,0 +1,26 @@
+{
+  "domain": "research",
+  "intent": "market trend analysis",
+  "payload": {
+    "signals": [
+      {
+        "title": "Offer A",
+        "category": "prompts",
+        "price_usd": 49,
+        "source": "gumroad",
+        "creator": "Creator One",
+        "sales_badge": "bestseller",
+        "timeframe": "popular_weekly"
+      },
+      {
+        "title": "Offer B",
+        "category": "templates",
+        "price_usd": 79,
+        "source": "gumroad",
+        "creator": "Creator Two",
+        "sales_badge": "trending",
+        "timeframe": "popular_monthly"
+      }
+    ]
+  }
+}

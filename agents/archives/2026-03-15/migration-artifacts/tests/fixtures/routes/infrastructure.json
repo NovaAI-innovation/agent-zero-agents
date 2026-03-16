@@ -1,0 +1,9 @@
+{
+  "domain": "infrastructure",
+  "intent": "deployment readiness",
+  "payload": {
+    "target": "application",
+    "environment": "staging",
+    "mode": "agent-build"
+  }
+}

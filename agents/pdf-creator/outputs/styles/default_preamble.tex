@@ -1,9 +1,0 @@
-% Enhanced preamble for Pandoc XeLaTeX with robust font fallback
-\usepackage{fontspec}
-% Prefer Arial, then Helvetica, else DejaVu Sans
-\IfFontExistsTF{Arial}{\setmainfont{Arial}}{\IfFontExistsTF{Helvetica}{\setmainfont{Helvetica}}{\setmainfont{DejaVu Sans}}}
-\setmonofont{DejaVu Sans Mono}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{geometry}
-\geometry{margin=1in}

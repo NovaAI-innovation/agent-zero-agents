@@ -1,0 +1,14 @@
+{
+  "name": "branding",
+  "title": "Branding Domain",
+  "description": "Creates brand kits, visual direction, and identity-ready assets from concise product context.",
+  "type": "specialized",
+  "version": "1.0.0",
+  "prompts": {
+    "role": "prompts/role.md",
+    "override": "prompts/override.md"
+  },
+  "skills": [],
+  "config": {}
+}
+

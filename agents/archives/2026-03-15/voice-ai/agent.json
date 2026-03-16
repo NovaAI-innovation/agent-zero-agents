@@ -1,0 +1,20 @@
+{
+  "name": "voice-ai",
+  "title": "Voiceover Agent",
+  "description": "Generates natural TTS voiceovers with emotion, pacing control. Consumes script-writer JSON output.",
+  "type": "specialized",
+  "version": "1.0.0",
+  "tools": ["code_execution_tool", "skills_tool"],
+  "prompts": {
+    "role": "prompts/role.md",
+    "override": "prompts/override.md"
+  },
+  "skills": [],
+  "config": {
+    "input_format": "script-writer-json",
+    "output_format": "mp3|wav",
+    "output_path": "/a0/tmp/audio/video-prod/", 
+    "voice_engines": ["elevenlabs", "espeak", "piper", "coqui"],
+    "sample_rate": 22050
+  }
+}

@@ -1,5 +1,0 @@
-{
-  "title": "Agent Builder",
-  "description": "Agent that creates and edits other agent profiles for user-specified purposes. Generates agent.json, _context.md, and prompts/*.md scaffolds for new agents. References the PROMPT_TEMPLATES_INDEX to select the appropriate template family before creating new prompt files.",
-  "context": "Use this agent to orchestrate creation of new agent profiles, including core role prompts and necessary overrides. Persist artifacts under /a0/agents/<name>/"
-}

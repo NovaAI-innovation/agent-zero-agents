@@ -1,0 +1,18 @@
+{
+  "domain": "research",
+  "intent": "sparse market scan",
+  "payload": {
+    "signals": [
+      {
+        "title": "Starter Pack",
+        "category": "prompts",
+        "price_usd": 19,
+        "source": "gumroad",
+        "creator": "unknown",
+        "sales_badges": [],
+        "timeframe": "popular_daily"
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,12 @@
+{
+  "name": "prompt-eval",
+  "pass_threshold": 0.8,
+  "criteria": {
+    "clarity": 0.2,
+    "specificity": 0.2,
+    "structure": 0.15,
+    "bias_free": 0.15,
+    "robustness": 0.15,
+    "efficiency": 0.15
+  }
+}
